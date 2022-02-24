@@ -59,7 +59,7 @@ h3 {
   padding-left: 55px;
 }
 .nav {
-  grid-area: 2 / 2 / 2 / 12;
+  grid-area: 2 / 2 / 2 / 11;
 }
 .menu {
   display: flex;
@@ -116,7 +116,7 @@ article {
   line-height: 1.5;
 }
 .article-center {
-  grid-area: 2 / 1 / 6 / 9;
+  grid-area: 2 / 1 / 6 / 5;
 }
 .article-center-2 {
   grid-area: 7 / 1 / 12 / 12;
@@ -128,8 +128,7 @@ article {
   grid-area: 7 / 6 / 12 / 13;
 }
 .image-right {
-  grid-area: 2 / 9 / 6 / 13;
-  padding-left: 50px;
+  grid-area: 2 / 5 / 6 / 13;
 }
 
 .calendar {
