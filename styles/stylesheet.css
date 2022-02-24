@@ -1,0 +1,247 @@
+* {
+  box-sizing: border-box;
+  margin: 1px;
+  font-family: arial, sans-serif;
+  font-size: 17px;
+}
+.hidden {
+  position: relative;
+  left: -10000px;
+  top: auto;
+}
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.grid-main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.h2 {
+  display: flex;
+  grid-row: 1;
+  grid-column: 1 / span 12;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 2rem;
+  color: rgb(27, 68, 127);
+}
+h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgb(27, 68, 127);
+}
+
+/*------Header container------*/
+.header-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-area: 1 / 1 / 1 / span 12;
+}
+.header {
+  grid-area: 1 / 5 / 1 / span 7;
+  font-size: 4rem;
+  font-weight: 700;
+  color: rgb(3, 162, 223);
+}
+.header-flex {
+  display: flex;
+  grid-area: 1 / 1 / 1 / span 12;
+}
+.header-img-1 {
+  grid-area: 1 / 4 / 1 / 4;
+  padding-top: 10px;
+  padding-left: 55px;
+}
+.nav {
+  grid-area: 2 / 2 / 2 / 12;
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0px;
+  border: 1px solid black;
+  padding-left: 0px;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover,
+a:focus {
+  color: rgb(235, 0, 0);
+}
+
+/*------Main container------*/
+.main-content {
+  --auto-grid-min-size: 16rem;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
+  grid-template-rows: auto;
+  grid-area: 2 / 2 / 5 / span 10;
+  padding-bottom: 2rem;
+}
+.main-content-2 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto repeat(10, 1fr);
+  grid-area: 2 / 2 / 5 / span 10;
+}
+.side-bar-left {
+  grid-area: 7 / 2 / 9 / 6;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px black solid;
+  margin: 0px;
+}
+.side-bar-right {
+  grid-area: 3 / 9 / 5 / 12;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px black solid;
+  margin: 0px;
+}
+article {
+  line-height: 1.5;
+}
+.article-center {
+  grid-area: 2 / 1 / 6 / 9;
+}
+.article-center-2 {
+  grid-area: 7 / 1 / 12 / 12;
+}
+.article-left {
+  grid-area: 2 / 1 / 6 / 8;
+}
+.article-right {
+  grid-area: 7 / 6 / 12 / 13;
+}
+.image-right {
+  grid-area: 2 / 9 / 6 / 13;
+  padding-left: 50px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+.calendar-text {
+  display: grid;
+  grid-area: 2 / 2 / 2 / 2;
+  align-items: center;
+  justify-content: center;
+}
+.register {
+  grid-row: 4;
+  grid-column: 2;
+}
+
+/*------Figures------*/
+.figure-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-area: 6 / 2 / 7 / span 10;
+  grid-gap: 5px;
+}
+.figure-1 {
+  grid-area: 1 / 1 / 4 / 3;
+}
+.figure-2 {
+  grid-area: 3 / 3 / 3 / 5;
+  z-index: 3;
+}
+.figure-2-1 {
+  grid-area: 10 / 2 / 12 / 6;
+}
+.figure-3 {
+  grid-area: 1 / 3 / 3 / 5;
+  z-index: 2;
+}
+.figure-4 {
+  grid-area: 2 / 9 / 4 / 12;
+}
+.video {
+  grid-area: 2 / 6 / 4 / 7;
+  z-index: 4;
+}
+
+/*------Footer------*/
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-area: 8 / 2 / 10 / span 10;
+}
+.footer {
+  grid-area: 1 / 1 / span 12 / span 12;
+}
+.logo-white {
+  grid-area: 3 / 2 / 3 / 3;
+}
+.address {
+  grid-area: 9 / 10 / 12 / 13;
+  color: rgb(255, 255, 255);
+}
+.policy {
+  grid-area: 11 / 1 / 12 / 7;
+  font-size: 0.75rem;
+  padding-left: 10px;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+.col-2 {
+  width: 16.66%;
+}
+.col-3 {
+  width: 25%;
+}
+.col-4 {
+  width: 33.33%;
+}
+.col-5 {
+  width: 41.66%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-7 {
+  width: 58.33%;
+}
+.col-8 {
+  width: 64.66%;
+}
+.col-9 {
+  width: 75%;
+}
+.col-10 {
+  width: 83.33%;
+}
+.col-11 {
+  width: 91.66%;
+}
+.col-12 {
+  width: 100%;
+}
+
+/*Added skip navigation*/
+/*Added underline on nav bar to indicate current page*/
+/*Added .sr-only to indicate which menu buttons work*/
+/*Added :focus to links*/
+
+/*Page can be zoomed from 75% to 200% without breaking*/
+/*Removed overly busy background image*/
+/*Changed :hover and :focus color for better contrast*/
