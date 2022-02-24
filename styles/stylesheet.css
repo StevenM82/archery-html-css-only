@@ -17,6 +17,7 @@
   height: 1px;
   overflow: hidden;
 }
+
 .grid-main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -115,7 +116,7 @@ article {
   line-height: 1.5;
 }
 .article-center {
-  grid-area: 2 / 1 / 6 / 5;
+  grid-column: 1 / span 4;
 }
 .article-center-2 {
   grid-area: 7 / 1 / 12 / 12;
