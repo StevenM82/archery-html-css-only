@@ -40,7 +40,7 @@ h3 {
 /*------Header container------*/
 .header-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: subgrid;
   grid-area: 1 / 1 / 1 / span 12;
 }
 .header {
@@ -59,7 +59,7 @@ h3 {
   padding-left: 55px;
 }
 .nav {
-  grid-area: 2 / 2 / 2 / 11;
+  grid-area: 2 / 2 / 2 / 12;
 }
 .menu {
   display: flex;
@@ -90,7 +90,6 @@ a:focus {
     auto-fill,
     minmax(var(--auto-grid-min-size), 1fr)
   );
-  grid-template-rows: auto;
   grid-area: 2 / 2 / 5 / span 10;
   padding-bottom: 2rem;
 }
@@ -101,13 +100,13 @@ a:focus {
   grid-area: 2 / 2 / 5 / span 10;
 }
 .side-bar-left {
-  grid-area: 7 / 2 / 9 / 6;
+  grid-area: 5 / 1 / 7 / 4;
   background-color: rgba(255, 255, 255, 0);
   border: 1px black solid;
   margin: 0px;
 }
 .side-bar-right {
-  grid-area: 3 / 9 / 5 / 12;
+  grid-area: 2 / 10 / 4 / 13;
   background-color: rgba(255, 255, 255, 0);
   border: 1px black solid;
   margin: 0px;
@@ -122,10 +121,10 @@ article {
   grid-area: 7 / 1 / 12 / 12;
 }
 .article-left {
-  grid-area: 2 / 1 / 6 / 8;
+  grid-area: 2 / 1 / 6 / 9;
 }
 .article-right {
-  grid-area: 7 / 6 / 12 / 13;
+  grid-area: 5 / 5 / 7 / 13;
 }
 .image-right {
   grid-area: 2 / 5 / 6 / 13;
@@ -151,11 +150,12 @@ article {
 .figure-container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-area: 6 / 2 / 7 / span 10;
+  grid-area: 6 / 2 / 7 / 12;
   grid-gap: 5px;
 }
 .figure-1 {
-  grid-area: 1 / 1 / 4 / 3;
+  grid-row: span 3;
+  grid-column: span 2;
 }
 .figure-2 {
   grid-area: 3 / 3 / 3 / 5;
@@ -190,7 +190,7 @@ article {
   grid-area: 3 / 2 / 3 / 3;
 }
 .address {
-  grid-area: 9 / 10 / 12 / 13;
+  grid-area: 9 / 11 / 12 / 13;
   color: rgb(255, 255, 255);
 }
 .policy {
