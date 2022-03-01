@@ -160,9 +160,6 @@ article {
 .figure-2 {
   grid-column: span 2;
 }
-.figure-2-1 {
-  grid-column: 1 / span 2;
-}
 .figure-3 {
   grid-column: span 2;
 }
@@ -193,6 +190,10 @@ article {
   grid-area: 11 / 1 / 12 / 7;
   font-size: 0.75rem;
   padding-left: 10px;
+}
+
+/*------Media Queries------*/
+@media screen and (min-width: 1px) and (max-width: 767px) {
 }
 
 .col-1 {
@@ -231,12 +232,3 @@ article {
 .col-12 {
   width: 100%;
 }
-
-/*Added skip navigation*/
-/*Added underline on nav bar to indicate current page*/
-/*Added .sr-only to indicate which menu buttons work*/
-/*Added :focus to links*/
-
-/*Page can be zoomed from 75% to 200% without breaking*/
-/*Removed overly busy background image*/
-/*Changed :hover and :focus color for better contrast*/
