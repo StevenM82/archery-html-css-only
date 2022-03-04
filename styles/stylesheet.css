@@ -154,7 +154,6 @@ article {
   row-gap: 1rem;
 }
 .figure-1 {
-  grid-row: span 3;
   grid-column: span 2;
 }
 .figure-2 {
