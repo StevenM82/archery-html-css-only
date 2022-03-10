@@ -1,0 +1,27 @@
+{
+  "name": "archery-html-css-only",
+  "version": "1.0.0",
+  "description": "initial archery page ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StevenM82/archery-html-css-only.git"
+  },
+  "author": "StevenM82",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StevenM82/archery-html-css-only/issues"
+  },
+  "homepage": "https://github.com/StevenM82/archery-html-css-only#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "eslint": "^8.10.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.1"
+  }
+}
