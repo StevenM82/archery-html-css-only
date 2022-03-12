@@ -43,36 +43,27 @@ h3 {
   display: grid;
   grid-template-columns: subgrid;
   grid-area: 1 / 1 / 1 / span 12;
-}
-.header {
-  grid-area: 1 / 5 / 1 / span 7;
-  font-size: 4rem;
-  font-weight: 700;
-  color: rgb(3, 162, 223);
+  background-color: rgb(3, 162, 223);
 }
 .header-img-1 {
   grid-area: 1 / 4 / 1 / 4;
   padding-top: 10px;
   padding-left: 55px;
 }
-.nav {
-  grid-area: 2 / 2 / 2 / 12;
-}
 .menu {
   display: flex;
-  flex-direction: row;
+  grid-area: 2 / 2 / 2 / 12;
   list-style: none;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  color: white;
   margin: 0px;
-  border: 1px solid black;
   padding-left: 0px;
   font-weight: 700;
 }
-
 a {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 a:hover,
 a:focus {
@@ -126,6 +117,20 @@ article {
   grid-area: 2 / 5 / 6 / 13;
 }
 
+/*---- instructors page ----*/
+.instructor-section {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-area: 2 / 2 / auto / span 10;
+  gap: 1rem;
+}
+.instructor-intro {
+  grid-area: 1 / 1 / 1 / span 12;
+}
+.card-background {
+  background-color: rgb(27, 68, 127);
+}
+
 /*---- classes offered ----*/
 .calendar {
   display: grid;
@@ -175,6 +180,13 @@ article {
 .footer {
   grid-area: 1 / 1 / span 12 / span 12;
 }
+.footer-background {
+  grid-area: 1 / 1 / span 12 / span 12;
+  border: 1px solid black;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
 .logo-white {
   grid-area: 3 / 2 / 3 / 3;
 }
@@ -183,13 +195,40 @@ article {
   color: rgb(255, 255, 255);
 }
 .policy {
-  grid-area: 11 / 1 / 12 / 7;
+  grid-area: 11 / 1 / 12 / span 12;
   font-size: 0.75rem;
   padding-left: 10px;
+  color: white;
 }
 
 /*------Media Queries------*/
 @media screen and (min-width: 1px) and (max-width: 767px) {
+  .grid-main,
+  .header-container,
+  .instructor-section {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .instructor-section {
+    color: rgb(255, 255, 255);
+  }
+  .menu {
+    flex-wrap: wrap;
+  }
+  .instructor-intro {
+    grid-area: auto;
+  }
+  [class|='image-wire'] {
+    grid-column: span 1;
+    border: 1px solid black;
+    background-color: white;
+  }
+  .policy {
+    grid-area: 12 / 1 / 12 / span 12;
+    font-size: 0.5rem;
+    padding-left: 10px;
+    color: white;
+  }
 }
 
 .col-1 {
@@ -227,99 +266,4 @@ article {
 }
 .col-12 {
   width: 100%;
-}
-
-/*----- wire framing practice -----*/
-.header-container-wire {
-  display: grid;
-  grid-template-columns: subgrid;
-  grid-area: 1 / 1 / 1 / span 12;
-  border: 1px solid black;
-}
-.header-wire {
-  grid-area: 1 / 1 / 1 / span 12;
-  font-size: 4rem;
-  font-weight: 700;
-  color: rgb(3, 162, 223);
-  border: 1px solid black;
-}
-.header-img-1-wire {
-  grid-area: 1 / 4 / 1 / 4;
-  padding-top: 10px;
-  padding-left: 55px;
-}
-.nav-list-wire {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  border: 1px solid black;
-}
-.nav-wire {
-  grid-area: 2 / 2 / 2 / 12;
-}
-.menu-wire {
-  list-style: none;
-  margin: 0px;
-  border: 1px solid black;
-  padding-left: 0px;
-  font-weight: 700;
-}
-.list-wire {
-  border: 1px solid black;
-}
-.section-wire {
-  display: grid;
-  grid-template-columns: subgrid;
-  grid-area: 2 / 2 / auto / span 10;
-  gap: 1rem;
-}
-.image-wire {
-  grid-row: span 1;
-  grid-column: span 3;
-  border: 1px solid black;
-  background-color: white;
-}
-.image-wire-2 {
-  grid-row: span 2;
-  grid-column: span 3;
-  border: 1px solid black;
-  background-color: white;
-}
-.image-wire-3 {
-  grid-row: span 2;
-  grid-column: span 2;
-  border: 1px solid black;
-  background-color: white;
-}
-.image-wire-4 {
-  grid-row: span 3;
-  grid-column: span 2;
-  border: 1px solid black;
-  background-color: white;
-}
-.image-wire-5 {
-  grid-row: span 3;
-  grid-column: span 2;
-  border: 1px solid black;
-  background-color: white;
-}
-.footer-background-wire {
-  grid-area: 1 / 1 / span 12 / span 12;
-  border: 1px solid black;
-  padding: 2rem;
-  background-color: white;
-  width: 100%;
-  height: 100%;
-}
-/*---- media queries for wire ----*/
-@media screen and (min-width: 1px) and (max-width: 767px) {
-  .grid-main,
-  .header-container-wire,
-  .section-wire {
-    grid-template-columns: 1fr;
-    gap: 0;
-  }
-  [class|='image-wire'] {
-    grid-column: span 1;
-  }
 }
