@@ -28,13 +28,9 @@
   grid-row: 1;
   grid-column: 1 / span 12;
   justify-content: center;
-  font-weight: 700;
-  font-size: 2rem;
   color: rgb(27, 68, 127);
 }
 h3 {
-  font-weight: 700;
-  font-size: 1.2rem;
   color: rgb(27, 68, 127);
 }
 
@@ -42,7 +38,7 @@ h3 {
 .header-container {
   display: grid;
   grid-template-columns: subgrid;
-  grid-area: 1 / 1 / 1 / span 12;
+  grid-area: 1 / 2 / 1 / span 10;
   background-color: rgb(3, 162, 223);
 }
 .header-img-1 {
@@ -52,7 +48,7 @@ h3 {
 }
 .menu {
   display: flex;
-  grid-area: 2 / 2 / 2 / 12;
+  grid-area: 2 / 1 / 2 / span 12;
   list-style: none;
   justify-content: space-evenly;
   align-items: center;
@@ -117,7 +113,7 @@ article {
   grid-area: 2 / 5 / 6 / 13;
 }
 
-/*---- instructors page ----*/
+/*---- Instructors page ----*/
 .instructor-section {
   display: grid;
   grid-template-columns: subgrid;
@@ -129,9 +125,15 @@ article {
 }
 .card-background {
   background-color: rgb(27, 68, 127);
+  border: 1px solid black;
+}
+.card-flex {
+  display: flex;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
 }
 
-/*---- classes offered ----*/
+/*---- Classes offered ----*/
 .calendar {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
@@ -218,10 +220,15 @@ article {
   .instructor-intro {
     grid-area: auto;
   }
-  [class|='image-wire'] {
-    grid-column: span 1;
-    border: 1px solid black;
-    background-color: white;
+  .h2 {
+    display: flex;
+    grid-row: 1;
+    grid-column: 1 / span 12;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+  }
+  h3 {
+    color: rgb(255, 255, 255);
   }
   .policy {
     grid-area: 12 / 1 / 12 / span 12;
@@ -267,3 +274,11 @@ article {
 .col-12 {
   width: 100%;
 }
+
+/*---- Save for more wire framing ----*/
+
+/* [class|='image-wire'] {
+  grid-column: span 1;
+  border: 1px solid black;
+  background-color: white;
+} */
