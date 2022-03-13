@@ -22,7 +22,6 @@
   grid-template-columns: repeat(12, 1fr);
   gap: 1rem;
 }
-
 .h2 {
   display: flex;
   grid-row: 1;
@@ -124,13 +123,17 @@ article {
   grid-area: 1 / 1 / 1 / span 12;
 }
 .card-background {
-  background-color: rgb(27, 68, 127);
+  --auto-grid-min-size: 16rem;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
   border: 1px solid black;
 }
 .card-flex {
   display: flex;
   flex-direction: column;
-  color: rgb(255, 255, 255);
 }
 
 /*---- Classes offered ----*/
@@ -212,7 +215,7 @@ article {
     gap: 0;
   }
   .instructor-section {
-    color: rgb(255, 255, 255);
+    row-gap: 0.5rem;
   }
   .menu {
     flex-wrap: wrap;
@@ -225,10 +228,6 @@ article {
     grid-row: 1;
     grid-column: 1 / span 12;
     justify-content: center;
-    color: rgb(255, 255, 255);
-  }
-  h3 {
-    color: rgb(255, 255, 255);
   }
   .policy {
     grid-area: 12 / 1 / 12 / span 12;
@@ -237,7 +236,35 @@ article {
     color: white;
   }
 }
-
+@media screen and (min-width: 768px) and (max-width: 919px) {
+  .grid-main,
+  .header-container,
+  .instructor-section {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .instructor-section {
+    row-gap: 0.5rem;
+  }
+  .menu {
+    flex-wrap: wrap;
+  }
+  .instructor-intro {
+    grid-area: auto;
+  }
+  .h2 {
+    display: flex;
+    grid-row: 1;
+    grid-column: 1 / span 12;
+    justify-content: center;
+  }
+  .policy {
+    grid-area: 12 / 1 / 12 / span 12;
+    font-size: 0.5rem;
+    padding-left: 10px;
+    color: white;
+  }
+}
 .col-1 {
   width: 8.33%;
 }
