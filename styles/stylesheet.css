@@ -126,23 +126,32 @@ article {
   grid-area: 1 / 1 / 1 / span 12;
 }
 .card-grid {
+  /* --auto-grid-min-size: 16rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  ); */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   grid-area: 2 / 1 / auto / span 12;
-  gap: 1rem;
 }
 .card-background {
   display: grid;
   grid-template-columns: subgrid;
   grid-column: span 2;
   color: rgb(3, 163, 223);
+  background-color: rgb(27, 68, 127);
+  border: 1px solid black;
 }
 .instructor-border {
-  border-left: 1rem solid rgb(27, 68, 127);
-  border-right: 0.25rem solid rgb(27, 68, 127);
+  padding-left: 1rem;
 }
 .instructor-image {
   padding: 1rem 0;
+}
+.card-text {
+  grid-area: 1 / 2;
 }
 .instructor-name {
   font-size: 1.5rem;
@@ -245,20 +254,22 @@ article {
   }
   .card-grid {
     display: flex;
-    grid-area: 2 / 1 / auto / span 12;
+    flex-direction: column;
     gap: 0;
   }
   .card-background {
     display: flex;
     flex-direction: column;
     color: rgb(3, 163, 223);
+    background-color: rgb(255, 255, 255);
     padding: 0.5rem;
+    border: 0;
+  }
+  .instructor-name {
+    border-bottom: 0.25rem solid rgb(27, 68, 127);
   }
   .instructor-border {
     border-top: 1rem solid rgb(27, 68, 127);
-    border-bottom: 0.25rem solid rgb(27, 68, 127);
-    border-left: 0;
-    border-right: 0;
   }
   .h2 {
     display: flex;
