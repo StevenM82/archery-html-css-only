@@ -123,23 +123,18 @@ article {
   gap: 1rem;
 }
 .instructor-intro {
-  grid-area: 1 / 1 / 1 / span 12;
+  grid-column: 1 / -1;
 }
 .card-grid {
-  /* --auto-grid-min-size: 16rem;
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  ); */
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-area: 2 / 1 / auto / span 12;
+  gap: 0.5rem;
 }
 .card-background {
   display: grid;
   grid-template-columns: subgrid;
-  grid-column: span 2;
+  grid-column: span 6;
   color: rgb(3, 163, 223);
   background-color: rgb(27, 68, 127);
   border: 1px solid black;
@@ -151,7 +146,7 @@ article {
   padding: 1rem 0;
 }
 .card-text {
-  grid-area: 1 / 2;
+  grid-area: 1 / 2 / 1 / -1;
 }
 .instructor-name {
   font-size: 1.5rem;
@@ -274,7 +269,7 @@ article {
   .h2 {
     display: flex;
     grid-row: 1;
-    grid-column: 1 / span 12;
+    grid-column: 1 / -1;
     justify-content: center;
   }
   .policy {
@@ -282,6 +277,26 @@ article {
     font-size: 0.5rem;
     padding-left: 10px;
     color: white;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 919px) {
+  .card-grid {
+    display: grid;
+    gap: 0;
+  }
+  .card-background {
+    display: flex;
+    flex-direction: column;
+    color: rgb(3, 163, 223);
+    background-color: rgb(255, 255, 255);
+    padding: 0.5rem;
+    border: 0;
+  }
+  .instructor-name {
+    border-bottom: 0.25rem solid rgb(27, 68, 127);
+  }
+  .instructor-border {
+    border-top: 1rem solid rgb(27, 68, 127);
   }
 }
 
