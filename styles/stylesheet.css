@@ -20,7 +20,6 @@
 .grid-main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  gap: 1rem;
 }
 .h2 {
   display: flex;
@@ -39,25 +38,25 @@ h3 {
 /*------Header container------*/
 .header-container {
   display: grid;
-  grid-template-columns: subgrid;
+  grid-template-columns: repeat(12, 1fr);
   grid-area: 1 / 2 / 1 / span 10;
   background-color: rgb(3, 162, 223);
-}
-.header-img-1 {
-  grid-area: 1 / 4 / 1 / 4;
-  padding-top: 10px;
-  padding-left: 55px;
+  padding: 1rem;
 }
 .menu {
   display: flex;
-  grid-area: 2 / 1 / 2 / span 12;
+  grid-area: 1 / 1 / 1 / 6;
   list-style: none;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-end;
   color: white;
   margin: 0px;
   padding-left: 0px;
   font-weight: 700;
+}
+.header-image {
+  grid-area: 1 / 12 / 1 / 12;
+  padding-bottom: 1rem;
 }
 a {
   text-decoration: none;
@@ -118,12 +117,12 @@ article {
 /*---- Instructors page ----*/
 .instructor-section {
   display: grid;
-  grid-template-columns: subgrid;
+  grid-template-columns: repeat(12, 1fr);
   grid-area: 2 / 2 / auto / span 10;
   gap: 1rem;
 }
 .instructor-intro {
-  grid-column: 1 / -1;
+  grid-area: 1 / 1 / 1 / span 12;
 }
 .instructor-bow {
   grid-area: 1 / 11 / 3 / -1;
@@ -134,11 +133,10 @@ article {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-area: 2 / 1 / auto / span 12;
-  gap: 0.5rem;
 }
 .card-background {
   display: grid;
-  grid-template-columns: subgrid;
+  grid-template-columns: repeat(12, 1fr);
   grid-column: span 5;
   color: rgb(3, 163, 223);
   background-color: rgb(27, 68, 127);
@@ -152,6 +150,8 @@ article {
 }
 .card-text {
   grid-area: 1 / 2 / 1 / -1;
+  padding-left: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 .instructor-name {
   font-size: 1.5rem;
@@ -243,6 +243,14 @@ article {
     grid-template-columns: 1fr;
     gap: 0;
   }
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .header-image {
+    padding-left: 1rem;
+  }
   .instructor-section {
     row-gap: 0.5rem;
   }
@@ -265,7 +273,6 @@ article {
     flex-direction: column;
     color: rgb(3, 163, 223);
     background-color: rgb(255, 255, 255);
-    padding: 0.5rem;
     border: 0;
   }
   .instructor-name {
@@ -273,6 +280,10 @@ article {
   }
   .instructor-border {
     border-top: 1rem solid rgb(27, 68, 127);
+  }
+  .card-text {
+    padding-left: 0;
+    padding-bottom: 0;
   }
   .h2 {
     display: flex;
@@ -288,6 +299,12 @@ article {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 919px) {
+  .header-image {
+    padding-bottom: 2.5rem;
+  }
+  .menu {
+    grid-column: 1 / -1;
+  }
   .card-grid {
     display: grid;
     gap: 0;
@@ -298,7 +315,6 @@ article {
     grid-column: span 6;
     color: rgb(3, 163, 223);
     background-color: rgb(255, 255, 255);
-    padding: 0.5rem;
     border: 0;
   }
   .instructor-bow {
@@ -309,6 +325,10 @@ article {
   }
   .instructor-border {
     border-top: 1rem solid rgb(27, 68, 127);
+  }
+  .card-text {
+    padding-left: 0;
+    padding-bottom: 0;
   }
 }
 
